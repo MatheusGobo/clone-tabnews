@@ -1,3 +1,9 @@
+import orchestrator from "tests/orchestrator";
+
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
+})
+
 // test.only Roda somente o teste com esse `.only`
 test("GET to /api/v1/status should return 200", async () => {
   // Fetch similar ao curl
